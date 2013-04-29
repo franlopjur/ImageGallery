@@ -31,21 +31,23 @@ public class GalleryActivity extends Activity implements
 	/**
 	 * Array con los distintos nombres de las imágenes
 	 */
-	private String[] mNames = { "Interfaz 1", "Interfaz 2", "Interfaz 3",
-			"Interfaz 4", };
+	private String[] mNames = { "Árbol 1", "Árbol 2", "Árbol 3",
+			"Árbol 4", "Árbol 5", "Árbol 6", "Árbol 7", "Árbol 8", "Árbol 9", "Árbol 10", "Árbol 11", "Árbol 12"};
 
 	/**
 	 * Array con los THumbs de las imágenes a mostrar (se pueden poner las
 	 * mismas imágenes que en el otro ya que se redimencionarán
 	 */
-	private Integer[] mThumbIds = { R.drawable.interfaz1,
-			R.drawable.interfaz1_2, R.drawable.interfaz2, R.drawable.interfaz3 };
+	private Integer[] mThumbIds = { R.drawable.arbol1,
+			R.drawable.arbol2, R.drawable.arbol3, R.drawable.arbol4, R.drawable.arbol5, R.drawable.arbol6, R.drawable.arbol1,
+			R.drawable.arbol2, R.drawable.arbol3, R.drawable.arbol4, R.drawable.arbol5, R.drawable.arbol6};
 
 	/**
 	 * Array con las imágenes a mostrar en la galería
 	 */
-	private Integer[] mImageIds = { R.drawable.interfaz1,
-			R.drawable.interfaz1_2, R.drawable.interfaz2, R.drawable.interfaz3 };
+	private Integer[] mImageIds = { R.drawable.arbol1,
+			R.drawable.arbol2, R.drawable.arbol3, R.drawable.arbol4, R.drawable.arbol5, R.drawable.arbol6, R.drawable.arbol1,
+			R.drawable.arbol2, R.drawable.arbol3, R.drawable.arbol4, R.drawable.arbol5, R.drawable.arbol6 };
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -88,7 +90,7 @@ public class GalleryActivity extends Activity implements
 	public View makeView() {
 		ImageView i = new ImageView(this);
 		i.setBackgroundColor(0xFF000000);
-		i.setScaleType(ImageView.ScaleType.FIT_CENTER);
+		i.setScaleType(ImageView.ScaleType.CENTER_CROP);
 		i.setLayoutParams(new ImageSwitcher.LayoutParams(
 				LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 		return i;
